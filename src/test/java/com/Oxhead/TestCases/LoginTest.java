@@ -10,23 +10,13 @@ import com.Oxhead.Pages.HomePage;
 import com.Oxhead.Pages.LoginPage;
 
 public class LoginTest extends TestBase {
-	
-	private static final String Sytem = null;
-	LoginPage loginPage;
-	HomePage homePage;
+	 
 	// test script execution starts from here @test
-	
-	public LoginTest() {
-		
-		super();
-	}
-	
-	
 	
 	@BeforeMethod
 	public void setUp() {
 		intialisation();
-		LoginPage loginPage = new LoginPage();
+	
 		
 	}
 	
@@ -36,7 +26,9 @@ public class LoginTest extends TestBase {
 	public void LoginPageTitleTest() {
 	
 			System.out.println(" hii login test1");
+			LoginPage loginPage = new LoginPage();
 		 String title= loginPage.validateLoginPageTitle();
+		 System.out.println(title);
 		Assert.assertEquals(title,"Oxhead");
 	}
 
@@ -49,6 +41,10 @@ public class LoginTest extends TestBase {
 	@Test(priority = 2)
 	public void loginTest() {
 		System.out.println(" hii login test2");
+		LoginPage loginPage = new LoginPage();
+		HomePage homePage = new HomePage();
+		
+		
 		  homePage= loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 		
 		

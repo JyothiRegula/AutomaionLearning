@@ -25,7 +25,7 @@ public class TestBase {
 		
 		try {
 				prop = new Properties();
-				FileInputStream ip = new FileInputStream("./design_pattern/src/main/java/com/Oxhead/config/config.properties");
+				FileInputStream ip = new FileInputStream("C:\\project1\\AutomaionLearning\\src\\main\\java\\com\\Oxhead\\config\\config.properties");
 				prop.load(ip);
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
