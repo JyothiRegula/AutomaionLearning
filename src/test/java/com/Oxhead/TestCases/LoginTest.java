@@ -12,14 +12,17 @@ import com.Oxhead.Pages.LoginPage;
 public class LoginTest extends TestBase {
 	 
 	// test script execution starts from here @test
+	LoginPage loginPage;
+	HomePage homePage;
+	
 	
 	
 	@BeforeMethod
 	public void setUp() {
 		
-		//System.out.println(" hii login test");
+		 
 		intialisation();
-	
+	 
 		
 	}
 	
@@ -29,24 +32,24 @@ public class LoginTest extends TestBase {
 	public void LoginPageTitleTest() {
 	
 			System.out.println(" hii login test1");
-			LoginPage loginPage = new LoginPage();
+		
 		 String title= loginPage.validateLoginPageTitle();
 		 System.out.println(title);
 		Assert.assertEquals(title,"Oxhead");
 	}
 
-	@Test(priority = 2)
+	/*@Test(priority = 2)
 	public void OxheadLogoTest(){
-		
+			System.out.println(" hii login test2");
 			LoginPage loginPage = new LoginPage();
 			boolean lp = loginPage.validateOxheadLogo();
 			Assert.assertTrue(lp);
-	}
+	}*/
 	
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void loginTest() {
-		System.out.println(" hii login test2");
+		System.out.println(" hii login test3");
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = new HomePage();
 		homePage= loginPage.login(prop.getProperty("username"),prop.getProperty("password"));

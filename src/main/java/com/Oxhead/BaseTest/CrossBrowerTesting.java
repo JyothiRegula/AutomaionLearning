@@ -2,6 +2,7 @@ package com.Oxhead.BaseTest;
 
 import java.util.concurrent.TimeUnit;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -41,6 +42,7 @@ public class CrossBrowerTesting {
 		}
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
+		System.out.println("open the browser");
 		Thread.sleep(3000);
 		driver.close();
 	}

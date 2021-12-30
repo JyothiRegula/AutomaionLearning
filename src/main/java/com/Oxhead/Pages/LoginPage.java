@@ -2,6 +2,7 @@ package com.Oxhead.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -11,26 +12,34 @@ public class LoginPage extends TestBase{
 
 	// page factory or Object repository
 	// for each nd every page u hv to create separate java classes in project
-	@FindBy(className = "mfp-close")
-	WebElement popUp;
+	// test cases steps
 	
-	@FindBy(xpath = "//input[@name='username']")
+	/*// close the popup
+	@FindBy(className ="[class='mfp-close']")
+	WebElement popupBtn; */
+	
+
+	/*// click on the sign in/register button
+	@FindBy(xpath ="/html[1]/body[1]/div[1]/header[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/a[1]/span[2]")
+	WebElement signInBtn;
+	// logo */
+
+	
+	@FindBy(xpath ="//img [@src='https://oxheaduatstg.wpengine.com/wp-content/uploads/2021/10/MicrosoftTeams-image-19.png']")
+	WebElement logoBtn;
+	// enter the username
+	@FindBy(xpath ="//input[@id='username']")
 	WebElement username;
-		
-	@FindBy(xpath = "//input[@name='password']")
+	
+	// enter password
+	@FindBy(xpath ="//input[@id='password']")
 	WebElement password;
 	
-	@FindBy(xpath = "//button[@class='button woocommerce-button woocommerce-form-login__submit']")
+	// click on login button
+	@FindBy(xpath ="//button[@name='login']")
 	WebElement loginBtn;
 	
-	@FindBy(xpath ="//a[@class='btn btn-style-link btn-color-primary create-account-button']")
-	WebElement signUpbBtn;
-	
 
-	@FindBy(xpath="//img[@src='https://oxheaduatstg.wpengine.com/wp-content/uploads/2021/10/MicrosoftTeams-image-19.png']")
-	WebElement imgLogo;
-
-	private WebElement oxheadLogo;
 	
 	// Initialising the Page Objects:
 	public LoginPage(){
@@ -45,11 +54,11 @@ public class LoginPage extends TestBase{
 	}
 	// This method is for oxHead logo feature
 	
-	public boolean validateOxheadLogo(){
+	/*public boolean validateOxheadLogo(){
 		return oxheadLogo.isDisplayed();
 		
 		
-	}
+	}*/
 	
 	public HomePage login(String un,String pwd){
 		username.sendKeys(un);

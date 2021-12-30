@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -42,8 +43,9 @@ public class TestBase {
 		 String browser = prop.getProperty("browser");
 		 if(browser.equalsIgnoreCase("Chrome"))
 			{
-				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
+				// open the browser
+			 	WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			}
 
@@ -59,7 +61,12 @@ public class TestBase {
 		 driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		 
 		 
+	
+			// enter the url
+			
 		 driver.get(prop.getProperty("url"));
+		 // close the popup
+		 driver.findElement(By.xpath("//button[@title='Close (Esc)']")).click();
 		 
 	}
 	
