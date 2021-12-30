@@ -1,6 +1,7 @@
 package com.Oxhead.BaseTest;
 
 import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
@@ -41,9 +42,9 @@ public class TestBase {
 		 String browser = prop.getProperty("browser");
 		 if(browser.equalsIgnoreCase("Chrome"))
 			{
-				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			}
 
 
@@ -58,7 +59,7 @@ public class TestBase {
 		 driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		 
 		 
-		 driver.get( prop.getProperty("url"));
+		 driver.get(prop.getProperty("url"));
 		 
 	}
 	
