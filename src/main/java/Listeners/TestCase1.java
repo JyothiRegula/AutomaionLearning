@@ -25,5 +25,14 @@ public class TestCase1 {
 		System.out.println("Google logo");
 		
 	}
+	@Test
+	public void test3(){
+		System.out.println("test3");
 	
+	}
+	@Test
+	public void test4(){
+		System.out.print("Test case running");
+	
+	}
 }
