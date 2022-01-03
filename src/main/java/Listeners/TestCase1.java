@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestCase1 {
+public class TestCase1  {
 
 	@Test
 	public void googleTitle() {
