@@ -3,6 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.Oxhead.Methods.MytestCase">
+        <methods>
+          <include name="Googleverify"/>
+        </methods>
+      </class> <!-- com.Oxhead.Methods.MytestCase -->
+=======
       <class name="Practice_Scripts.LoginTest1">
         <methods>
           <include name="freeCRMTitleTest"/>
@@ -10,6 +17,7 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- Practice_Scripts.LoginTest1 -->
+>>>>>>> b98cc4d6007c3df648d0cf3d370fb4070e966920
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
