@@ -2,13 +2,17 @@ package com.Oxhead.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 
 import com.Oxhead.Listeners.BaseTest;
 
 public class LoginPage_POM extends BaseTest{
+	private WebDriver driver1;
+
 	public LoginPage_POM(WebDriver driver) {
-     this.driver=driver;	
+		WebDriver driver1 =new ChromeDriver();
+     this.driver1=driver1;	
 	}
 	
 	//accessspecifier returnType elementname = driver.findelement(locator(locatorvalue));
@@ -32,6 +36,7 @@ public class LoginPage_POM extends BaseTest{
 
 	}
 	public void setUntb(String un) {
+		WebElement untb = null;
 		untb.sendKeys(un);
 	}
 	
