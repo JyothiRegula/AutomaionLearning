@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Oxhead.TestCases.LoginTest">
+      <class name="Practice_Scripts.LoginTest1">
         <methods>
-          <include name="loginTest"/>
-          <include name="tearDown"/>
+          <include name="freeCRMTitleTest"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Oxhead.TestCases.LoginTest -->
+      </class> <!-- Practice_Scripts.LoginTest1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
