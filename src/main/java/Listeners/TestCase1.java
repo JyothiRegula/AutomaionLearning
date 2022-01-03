@@ -32,7 +32,7 @@ public class TestCase1 {
 	}
 	@Test
 	public void test4(){
-		System.out.print("Test case running")
+		System.out.print("Test case running");
 	
-	
+	}
 }
