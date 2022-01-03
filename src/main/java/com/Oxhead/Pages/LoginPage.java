@@ -19,25 +19,25 @@ public class LoginPage extends TestBase{
 	WebElement popupBtn; */
 	
 
-	/*// click on the sign in/register button
-	@FindBy(xpath ="/html[1]/body[1]/div[1]/header[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/a[1]/span[2]")
+	// click on the sign in/register button
+	@FindBy(xpath ="//a[@title='My account']")
 	WebElement signInBtn;
-	// logo */
+	// logo 
 
 	
 	@FindBy(xpath ="//img [@src='https://oxheaduatstg.wpengine.com/wp-content/uploads/2021/10/MicrosoftTeams-image-19.png']")
-	WebElement logoBtn;
+	public WebElement logoBtn;
 	// enter the username
 	@FindBy(xpath ="//input[@id='username']")
-	WebElement username;
+	public WebElement username;
 	
 	// enter password
 	@FindBy(xpath ="//input[@id='password']")
-	WebElement password;
+	public WebElement password;
 	
 	// click on login button
 	@FindBy(xpath ="//button[@name='login']")
-	WebElement loginBtn;
+	public WebElement loginBtn;
 	
 
 	
@@ -61,10 +61,19 @@ public class LoginPage extends TestBase{
 	}*/
 	
 	public HomePage login(String un,String pwd){
+		
+	
+		signInBtn.click();
+		
 		username.sendKeys(un);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		return new HomePage() ;
+		
+	}
+
+	private void click() {
+		// TODO Auto-generated method stub
 		
 	}
 	
