@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Practice_Scripts.ExtentReportDemo">
+      <class name="com.Oxhead.Methods.MytestCase">
         <methods>
-          <include name="run2"/>
+          <include name="Googleverify"/>
         </methods>
-      </class> <!-- Practice_Scripts.ExtentReportDemo -->
+      </class> <!-- com.Oxhead.Methods.MytestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
