@@ -6,8 +6,9 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Listeners.TestCase1">
-     </class>
+      <class name="Listeners.TestCase1"/>
+     <class name="Listeners.ScreenShot"/>
+    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

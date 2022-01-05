@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -29,7 +30,7 @@ public class ExtentReportDemo {
 	 ExtentReports extent;
 	 WebDriver driver;	 
 	 // start reporters
-	 htmlreporter = new ExtentHtmlReporter("Appy2.html");
+	 htmlreporter = new ExtentHtmlReporter("Appy6.html");
 	 // create extent reports and attach reporter(s)
 	 extent =new ExtentReports();
 	 extent.attachReporter(htmlreporter);
@@ -37,8 +38,8 @@ public class ExtentReportDemo {
 	 
 		String projectPath=System.getProperty("user.dir");
 
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	 
 		ExtentTest test = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName(), "Sample Description");

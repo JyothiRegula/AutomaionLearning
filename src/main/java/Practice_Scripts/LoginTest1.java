@@ -2,7 +2,8 @@ package Practice_Scripts;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+
+//import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,14 +12,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.Oxhead.CommonUtils.TestUtil;
+import com.CRM.CommonUtils.TestUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTest1 {
 	
 	WebDriver driver;
-	Logger log = Logger.getLogger(LoginTest1.class);
+	//Logger log = Logger.getLogger(LoginTest1.class);
 	
 	// what is log? : capturing info/activities at the time of program execution
 	// types of logs
@@ -42,16 +43,16 @@ public class LoginTest1 {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.get("https://classic.crmpro.com");
 		
-		log.info("entering application url");
+		/*log.info("entering application url");
 		log.warn(" hey this is just warning message");
 		log.fatal( "hey this is just a fatal error message");
-		log.debug("this is just a debug message");
+		log.debug("this is just a debug message");*/
 	}
 		@Test(priority = 1)
 		public void freeCRMTitleTest(){
 			String title= driver.getTitle();
 			System.out.println(title);
-			log.info("login page title is---->" +title);
+			//log.info("login page title is---->" +title);
 			Assert.assertEquals(title,"CRMPRO - CRM software for customer relationship management, sales, and support.");
 		}
 		

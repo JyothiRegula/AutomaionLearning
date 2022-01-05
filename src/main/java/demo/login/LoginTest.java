@@ -1,13 +1,14 @@
 package demo.login;
 
 import org.testng.annotations.AfterMethod;
+
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 
-import com.Oxhead.BaseTest.TestBase;
-import com.Oxhead.Pages.HomePage;
-import com.Oxhead.Pages.LoginPage;
+import com.CRM.BaseTest.TestBase;
+import com.CRM.Pages.HomePage;
+import com.CRM.Pages.LoginPage;
 
 public class LoginTest extends TestBase {
 	 

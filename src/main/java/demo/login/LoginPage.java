@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.Oxhead.BaseTest.TestBase;
+import com.CRM.BaseTest.TestBase;
 
 public class LoginPage extends TestBase{
 
