@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.Oxhead.CommonUtils.TestUtil;
+import com.CRM.CommonUtils.TestUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
