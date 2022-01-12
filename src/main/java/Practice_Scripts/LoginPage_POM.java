@@ -1,4 +1,4 @@
-package com.CRM.Pages;
+package Practice_Scripts;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

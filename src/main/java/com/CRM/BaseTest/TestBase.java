@@ -25,8 +25,9 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
+	
 	// super call constructor
-	public TestBase()
+	public TestBase() throws Throwable
 	{
 		
 		try {
@@ -36,11 +37,7 @@ public class TestBase {
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
 			
-		} catch(IOException e) {
-			
-			e.printStackTrace();
-			
-		}
+		}  
    }
 	public static void intialisation(){
 		
@@ -50,15 +47,14 @@ public class TestBase {
 				// open the browser
 			 	WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
-				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				 
 			}
-
-
 			else if(browser.equalsIgnoreCase("Firefox"))
 			{
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 			}
+		 
 		 driver.manage().window().maximize();
 		 driver.manage().deleteAllCookies();
 		 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
@@ -71,7 +67,7 @@ public class TestBase {
 		// taking screenshot
 		TakesScreenshot ts = (TakesScreenshot)driver;
     	File src = ts.getScreenshotAs(OutputType.FILE);
-    	File dest= new File(System.getProperty("C:\\project1\\AutomaionLearning\\ Screenshots\\OrangeCRM.jpg"));
+    	File dest= new File(System.getProperty("user.dir")+"C:\\project1\\AutomaionLearning\\Screenshots\\Appy.jpg");
     	
 		try {
 			FileUtils.copyFile(src, dest);
@@ -79,12 +75,8 @@ public class TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-	}
+}
+	 
 	
 	
 	

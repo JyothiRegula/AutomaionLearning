@@ -33,9 +33,8 @@ public class LoginTest extends TestBase {
 	
 			System.out.println("Welcome to OrangeHRM");
 		
-		 String title= loginPage.validateLoginPageTitle();
-		 System.out.println(title);
-		Assert.assertEquals(title,"OrangeHRM");
+		 String loginPageTitle= loginPage.verifyLoginPageTitle();
+		 Assert.assertEquals(loginPageTitle,"OrangeHRM");
 	}
 
 	/*@Test(priority = 2)
@@ -49,7 +48,7 @@ public class LoginTest extends TestBase {
 	
 	@Test
 	public void loginTest() {
-		System.out.println("OrangeHRM loginpage");
+		 
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = new HomePage();
 		homePage= loginPage.login(prop.getProperty("Username"),prop.getProperty("Password"));

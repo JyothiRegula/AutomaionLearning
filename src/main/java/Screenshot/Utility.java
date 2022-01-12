@@ -7,14 +7,18 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.google.common.io.Files;
+
 public class Utility {
 	
 	public static void captureScreenshot(WebDriver driver,String screenshotName) {
-		try {
+		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source =ts.getScreenshotAs( OutputType.FILE);
-		FileUtils.copyFile(source,new File("./Screenshots/"+screenshotName+".png"));
-		
+		String path;
+		File dest =  new File(path);
+		try {
+			Files.copy(source,dest);
 		
 	}
 		catch (Exception e) {

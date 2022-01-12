@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Listeners.TestCase1">
+      <class name="com.CRM.TestCases.HomePageTest">
         <methods>
-          <include name="googleTitle"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="clickOnAdminPageTest"/>
         </methods>
-      </class> <!-- Listeners.TestCase1 -->
+      </class> <!-- com.CRM.TestCases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.CRM.BaseTest.TestBase;
 
-public class LoginPage extends TestBase{
+public class LoginPage  extends TestBase{
 
 	// page factory or Object repository
 	// for each nd every page u hv to create separate java classes in project
@@ -34,7 +34,7 @@ public class LoginPage extends TestBase{
 	}
 	
 	// Actions:
-	public static String validateLoginPageTitle(){
+	public static String verifyLoginPageTitle(){
 		return driver.getTitle();
 	}
 	// This method is for OrangeHRM logo feature
