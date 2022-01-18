@@ -30,7 +30,7 @@ public class ExtentReportDemo {
 	 ExtentReports extent;
 	 WebDriver driver;	 
 	 // start reporters
-	 htmlreporter = new ExtentHtmlReporter("Appy6.html");
+	 htmlreporter = new ExtentHtmlReporter("Appy8.html");
 	 // create extent reports and attach reporter(s)
 	 extent =new ExtentReports();
 	 extent.attachReporter(htmlreporter);

@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CRM.TestCases.HomePageTest">
+      <class name="Practice_Scripts.ExtentReportDemo">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="clickOnAdminPageTest"/>
+          <include name="LavanishPatel"/>
         </methods>
-      </class> <!-- com.CRM.TestCases.HomePageTest -->
+      </class> <!-- Practice_Scripts.ExtentReportDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

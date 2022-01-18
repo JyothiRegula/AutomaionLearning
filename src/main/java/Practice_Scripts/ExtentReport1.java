@@ -1,5 +1,6 @@
 package Practice_Scripts;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
@@ -28,7 +30,7 @@ public class ExtentReport1 {
 		public void setUp()
 		{
 			// start reporters
-			htmlreporter = new ExtentHtmlReporter("Lavanish2.html");
+			htmlreporter = new ExtentHtmlReporter("Lavanish9.html");
 
 			// create extent reports and attach reporter(s)
 			extent =new ExtentReports();
@@ -48,7 +50,7 @@ public class ExtentReport1 {
 		}
 
 		@Test
-		public void test1()
+		public void test1() throws Exception
 		{
 
 			ExtentTest test = extent.createTest( Thread.currentThread().getStackTrace()[1].getMethodName(), "Sample Description");
@@ -57,7 +59,9 @@ public class ExtentReport1 {
 			// log(LogStatus, details)
 			test.pass("Navigate to facebook");
 			test.log( Status.INFO,  "This step shows usage of log(status, details)");
-
+			test.pass("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
+			test.addScreenCaptureFromPath("screenshot.png");
+			
 
 			// close the popup
 			// click on the login button
