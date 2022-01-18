@@ -47,7 +47,6 @@ public class HomePageTest extends TestBase{
 		
 	}
 	
-=======
 
 	package com.OrangeHRM.testcases;
 
@@ -99,5 +98,4 @@ public class HomePageTest extends TestBase{
 
 	}
 
->>>>>>> c6035cd422b46402e06786d52d5d85bd1eaeb53f
 }
